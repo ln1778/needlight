@@ -1,0 +1,7 @@
+dist
+node_modules
+*.lock
+*.md
+vendor
+.DS_Store
+*-lock*

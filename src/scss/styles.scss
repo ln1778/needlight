@@ -1,0 +1,210 @@
+@import "~bootstrap/scss/bootstrap";
+body{
+  position: relative;
+  background-color: #000;
+  font-family: 'Travels', sans-serif;
+  color: #e5e6eb;
+  box-sizing: border-box;
+  line-height:1.6;
+  font-family: Travels, sans-serif;
+  background-color: #fff;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.togglebtn{
+   // position: fixed;
+    // right: 19px;
+    // top: 18px;
+    width: 32px;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 8px 5px 5px 5px;
+    opacity:1;
+    transition: all 2s ease-in-out;
+    will-change: opacity;
+    // z-index: 10;
+}
+#threed {
+  position: fixed;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.mainmenu a {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 10px 25px 10px 25px;
+  display: inline-block;
+  opacity:1;
+  will-change: opacity;
+}
+.iframebox{
+  flex:1;
+  width:100vw;
+  height:calc(100vh - 100px);
+}
+.st0{
+  transition: fill .3s ease-out;
+}
+.mainmenu{
+  a{
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    color:#333;
+    font-size:20px;
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 25px 10px 25px;
+    box-sizing: border-box;
+    display: inline-block;
+    opacity:1;
+    will-change: opacity;
+    text-decoration-line: none;
+ 
+  }
+}
+.canvasbox{
+  flex:1;
+}
+#canvas{
+  flex:1;
+}
+
+.mainbox{
+  transform: translate3d(0px, 0px, 0px);
+  padding-top:100px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width:100%;
+  min-height: 100vh;
+  z-index: 5;
+}
+@media (max-width: 767.5px){
+
+ .mainbox {
+  padding-top:83px;
+  box-sizing: border-box;
+ }
+ .mobilemenuopen .mainmenu a {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: .1s;
+  display: block;
+ }
+ .mobilemenuopen .mainmenu a:nth-of-type(1){
+  transition-duration: .3s;
+ }
+ .mainmenu a:first-of-type {
+  margin-top: 120px;
+}
+.mobilemenuopen{
+  background-color: #fff;
+}
+.mainmenu a {
+    color: #1b1b1b;
+    font-size: 13px;
+    white-space: nowrap;
+    float: none;
+    padding: 10px 10px 10px 45px;
+    box-sizing: border-box;
+    visibility: hidden;
+    clear: both;
+    width: 100%;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all .2s ease-out 0s;
+  }
+  .mainmenu a.selected {
+    text-decoration: underline;
+    color:#076ce0;
+  }
+  .mobilemenuopen .mainmenu a:nth-of-type(2) {
+    transition-duration: .325s;
+ }
+ .mobilemenuopen .mainmenu a:nth-of-type(3) {
+  transition-duration: .35s;
+}
+.mobilemenuopen .mainmenu a:nth-of-type(4) {
+  transition-duration: .375s;
+}
+.mobilemenuopen .mainmenu a:nth-of-type(5) {
+  transition-duration: .4s;
+}
+.mobilemenuopen .mainmenu a:nth-of-type(6) {
+  transition-duration: .425s;
+}
+.iframebox{
+  height: calc(100vh - 110px);
+}
+}
+
+
+@media (min-width: 767.5px) and (max-width: 1500px){
+  .mainmenu a:after, .mainmenu a.selected:after {
+    left: 20px;
+    bottom: 10px;
+    width: calc(100% - 40px);
+}
+.mainmenu a.selected{
+  color:#076ce0;
+}
+}
+@media (min-width: 767.5px)
+{
+  .appbox{
+    min-width:1000px;
+  }
+  .mainbox{
+    min-width:1000px;
+  }
+  .mainmenu a:after, .mainmenu a.selected:after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 50px);
+    height: 2px;
+    background-color: #076ce0;
+    left: 25px;
+    bottom: 10px;
+    transform: scaleX(0);
+    transform-origin: calc(100% + 10px) 0;
+    transition: transform .35s ease-out;
+}
+  .mainmenu a:hover:after, .mainmenu a.selected:after {
+    transform: scaleX(1);
+    transform-origin: -10px 0;
+  }
+  .mainmenu a:after, .mainmenu a.selected:after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 50px);
+    height: 2px;
+    background-color: #333;
+ 
+    left: 25px;
+    bottom: 10px;
+    transform: scaleX(0);
+    transform-origin: calc(100% + 10px) 0;
+    transition: transform .35s ease-out;
+  }
+  .mainmenu a:hover:after, .mainmenu a.selected:after {
+    transform: scaleX(1);
+    transform-origin: -10px 0;
+  }
+  .mainmenu a.selected{
+    color:#076ce0;
+  }
+}

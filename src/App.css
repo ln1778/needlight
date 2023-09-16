@@ -1,0 +1,77 @@
+.appbox {
+ display: flex;
+ flex-direction: column; 
+}
+
+.logo {
+  height:1.8rem;
+  padding:0;
+  will-change: filter;
+  box-sizing: border-box;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.navbox{
+    position: fixed;
+    z-index: 22;
+    padding:15px;
+    width:100vw;
+    height: auto;
+    background:#fff;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    .logoimg{
+      width:80px;
+    }
+}
+.pcnavcontainer{
+  position: fixed;
+  height:100px;
+  width:100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  z-index: 22;
+  justify-content: space-between;
+  background:#fff;
+  min-width:1000px;
+}
+.pclogobox{
+  height: auto;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding:0 15px;
+  .logoimg{
+    position: relative;
+    width: 120px;
+  }
+  .title{
+    display: block;
+    margin-left: 10px;
+    font-size: 32px;
+    color:rgb(7, 108, 224);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .china{
+    margin: 0 10px;
+    display: block;
+    font-size: 32px;
+    color:#ccc;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .pcnavbox{
+
+  
+  }
+}
+
